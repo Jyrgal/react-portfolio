@@ -1,0 +1,23 @@
+.backend {
+  width: 500px;
+  height: 500px;
+  background-image: url(./logos/backend.jpg);
+  background-size: 499px; 
+  will-change: transform;
+}
+
+.frontend {
+  width: 500px;
+  height: 500px;
+  background-size: 500px; 
+  background-image: url(./logos/frontend.jpg);
+  will-change: transform;
+}
+
+.misc {
+  width: 500px;
+  height: 500px;
+  background-size: 500px; 
+  background-image: url(./logos/misc.jpg);
+  will-change: transform;
+}

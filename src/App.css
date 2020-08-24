@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  background-color: #EC8B5E;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Main {
+  text-align: center;
+  background-image: url(./logos/cities.jpeg);
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,18 +22,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #EC8B5E;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #EC8B5E;;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #EC8B5E;
 }
 
 @keyframes App-logo-spin {

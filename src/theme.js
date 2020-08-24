@@ -3,16 +3,23 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { purple } from '@material-ui/core/colors';
 import Button from '@material-ui/core/Button';
+import { interpolateInferno } from "d3-scale-chromatic";
+import { scaleLinear } from "d3-scale";
+
+const linear = scaleLinear().domain([0, window.innerWidth]);
 
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: '#e91e63',
+      main: '#141A46',
     },
     secondary: {
-      main: '#651fff',
+      main: '#EC8b5E',
     },
+    text: {
+      main: '#ffda2a',
+    }
   },
 });
 
