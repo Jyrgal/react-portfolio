@@ -10,7 +10,6 @@ const linear = scaleLinear().domain([0, window.innerWidth]);
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark',
     primary: {
       main: '#141A46',
     },

@@ -6,6 +6,7 @@ import { AppBar, Toolbar, Typography,
 import {MenuIcon} from "@material-ui/icons"
 import ReactPlayer from 'react-player'
 import Logo from "./SpinLogo"
+import windowDimensions from './getWindowDimensions'
 
 const useStyles = makeStyles(() => ({
     logoStyles: {
@@ -21,27 +22,28 @@ const useStyles = makeStyles(() => ({
 }))
 const Header = () => {
     const classes = useStyles()
+    const { height, width } = windowDimensions()
     return (
-        <React.Fragment>
-            <AppBar position="fixed" color="transparent">
-                <Toolbar>
-                    <Container maxWidth="lg">
-                            <Grid item container alignItems="center" justify="center">
-                                <Grid item xs={0} sm={1}/>
-                                <Grid item xs={0} sm={3}>
-                                    <Button className={classes.logoStyles}>JP</Button>
-                                </Grid>
-                                <Grid item xs={0} sm={4}/>
-                                <Grid item xs={0} sm={3} alignItems='center'>
-                                    <Button className={classes.textStyles}>About</Button>
-                                    <Button className={classes.textStyles}>Projects</Button>
-                                    <Button className={classes.textStyles}>Contact</Button>
-                                </Grid>
-                            </Grid>
-                    </Container>
-                </Toolbar>
-            </AppBar>
-        </React.Fragment>
+      <React.Fragment>
+        <AppBar position="fixed" color="transparent">
+          <Toolbar>
+            <Container>
+              <Grid item container alignItems="center" justify="center">
+              <Grid item xs={0} sm={1}/>
+              <Grid item xs={0} sm={3}>
+                <Button className={classes.logoStyles}>JP</Button>
+              </Grid>
+                <Grid item xs={0} sm={4}/>
+                <Grid item xs={0} sm={3} alignItems='center'>
+                  <Button className={classes.textStyles}>About</Button>
+                  <Button className={classes.textStyles}>Projects</Button>
+                  <Button className={classes.textStyles}>Contact</Button>
+                </Grid>
+              </Grid>
+            </Container>
+          </Toolbar>
+        </AppBar>
+      </React.Fragment>
     )
 }
 

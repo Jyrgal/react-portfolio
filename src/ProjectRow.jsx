@@ -5,7 +5,7 @@ import MediaCard from './MediaCard'
 
 const ProjectRow = () => {
     return (
-        <Grid item container>
+        <Grid item container >
           <Grid item xs={0} sm={1}/>
           <Grid item xs={0} sm={4}>
             <MediaCard name="Dungeon Crawler" pic="videos/dungeon.png"/>

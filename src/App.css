@@ -12,8 +12,20 @@
   text-align: center;
   background-image: url(./logos/cities.jpeg);
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   image-rendering: -webkit-optimize-contrast;
+  position: relative; 
+  top: 0; 
+  left: 0; 
+  height: 100vh;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

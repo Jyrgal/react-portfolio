@@ -16,8 +16,10 @@ import Skills from './Skills'
 import Experience from './Experience'
 import Form from './MyForm'
 import Type from './Type'
+import windowDimensions from './getWindowDimensions'
 
 const App = () => {
+  
   return (
     <Grid container direction="column">
       <Grid item>
@@ -25,21 +27,20 @@ const App = () => {
       </Grid>
       
       <div className="Main">
-        <div style={{height: "600px"}}>
-          <div style={{height: "180px"}}/>
           <Title/>
-          <div style={{height: "300px"}}/>
-          <Fab href="#about" color="primary" aria-label="add">
+          <div style={{height: "35vh"}}/>
+          <Fab href="#about" color="white" aria-label="add">
             <ArrowDownwardIcon />
           </Fab>
-        </div>
-        <div style={{height: "150px"}}/>
-        {/* <SpinLogo/> */}
-        <div style={{height: "50px"}}/>
       </div>
+      <div style={{height: "10vh"}}/>
+      
       <Grid item container>
-        <Grid item xs={0} sm={2}/>
-        <Grid item xs={12} sm={8}>
+        <Grid item sm md/>
+        <Grid item sm
+              justify="center" 
+              alignItems="center"
+        >
           {/* <ReactPlayer url='videos/logo.mp4' wrapper="container" loop={true} playing={true} muted/>  */}
           {/* <Container maxWidth="false">
             <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
@@ -51,19 +52,20 @@ const App = () => {
           <div style={{height: "50px"}}/>
           <h1>Experience</h1>
           <Grid item container>
-            <Grid item xs={0} sm={1}/>
             <Grid item xs={0} sm={6}>
               <Experience experience="mastercard"/>
             </Grid>
-            <Grid item xs={0} sm={5}>
+            <Grid item xs={0} sm={6}>
               <Experience experience="auspost"/>
             </Grid>
-            <Grid item xs={0} sm={1}/>
           </Grid>
           
           <div style={{height: "50px"}}/>
           <h1>Skills</h1>
-          <Skills logo="backend"/>
+          <Skills logo="backend" style={{    display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center"}}/>
           <Grid item container>
             <Grid item xs={0} sm={6}/>
             <Grid item xs={0} sm={6}>
@@ -97,7 +99,8 @@ const App = () => {
           <Form/>
           <div style={{height: "50px"}}/>
         </Grid>
-        <Grid item xs={0} sm={2}/>
+        <Grid item sm
+        />
       </Grid>
     </Grid>
   )

@@ -11,12 +11,17 @@ const Experience = (props) => {
   const [properties, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
   const experience = props.experience
   return (
-      <animated.div
-        class={experience}
-        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-        onMouseLeave={() => set({ xys: [0, 0, 1] })}
-        style={{ transform: properties.xys.interpolate(trans) }}
-      />
+    <div style={{    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"}}>
+        <animated.div
+          class={experience}
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseLeave={() => set({ xys: [0, 0, 1] })}
+          style={{ transform: properties.xys.interpolate(trans) }}
+        />
+    </div>
   )
 }
 

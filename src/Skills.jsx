@@ -19,7 +19,11 @@ const Skills = (props) => {
   })
   const logo = props.logo
 
-  return items.map(i => <animated.div key={i} className={logo} style={{ transform: radians.interpolate(interp(i)) }} />)
+  return (
+    <div>
+      {items.map(i => <animated.div key={i} className={logo} style={{ transform: radians.interpolate(interp(i)) }} />)}
+    </div>
+  )
 }
 
 export default Skills
