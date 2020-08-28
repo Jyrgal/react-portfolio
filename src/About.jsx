@@ -37,7 +37,7 @@ export default function SimplePaper() {
           <div style={{height: "50px"}}/>
           <Paper className={classes.paper} background="#e91e63" elevation={10} >
             <h1 className={classes.writing}>Hi, I'm James</h1>
-            <h3 className={classes.writing}>An amibitious tech enthusiast 📟 who enjoys all sorts of challenges</h3>
+            <h3 className={classes.writing}>An amibitious tech enthusiast <span> 📟 </span> who enjoys all sorts of challenges</h3>
             <h3 className={classes.writing}>My passions 🔥 lie in discovering new and innovative things </h3>
             <h3 className={classes.writing}>like the vast landscape of machine learning 🤖DEEDOO DEEDOO</h3>
             <h3 className={classes.writing}>or the artistic 🎨 world of front end programming.</h3>

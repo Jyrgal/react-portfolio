@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component, useState, useRef } from 'react'
 import { AppBar, Toolbar, Typography, 
     makeStyles, Grid, Container, 
     Button, IconButton, CardMedia, GridListTile,
@@ -7,6 +7,7 @@ import {MenuIcon} from "@material-ui/icons"
 import ReactPlayer from 'react-player'
 import Logo from "./SpinLogo"
 import windowDimensions from './getWindowDimensions'
+import { useEffect } from 'react'
 
 const useStyles = makeStyles(() => ({
     logoStyles: {
@@ -20,31 +21,49 @@ const useStyles = makeStyles(() => ({
         fontSize: '18px',
     }
 }))
+
 const Header = () => {
-    const classes = useStyles()
-    const { height, width } = windowDimensions()
-    return (
-      <React.Fragment>
-        <AppBar position="fixed" color="transparent">
-          <Toolbar>
-            <Container>
-              <Grid item container alignItems="center" justify="center">
-              <Grid item xs={0} sm={1}/>
-              <Grid item xs={0} sm={3}>
-                <Button className={classes.logoStyles}>JP</Button>
-              </Grid>
-                <Grid item xs={0} sm={4}/>
-                <Grid item xs={0} sm={3} alignItems='center'>
-                  <Button className={classes.textStyles}>About</Button>
-                  <Button className={classes.textStyles}>Projects</Button>
-                  <Button className={classes.textStyles}>Contact</Button>
+
+      const classes = useStyles()
+      const { height, width } = windowDimensions()
+      const [Background, setBackground] = useState(false)
+      const appBar = useRef()
+      appBar.current = Background
+      useEffect(() => {
+        const handleScroll = () => {
+          const show = window.scrollY > height - 50
+          if (appBar.current !== show) {
+            setBackground(show)
+          }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+          document.removeEventListener('scroll', handleScroll)
+        }
+      }, [])
+
+      return (
+        <React.Fragment>
+          <AppBar position="fixed" color={Background ? 'primary': 'transparent'}>
+            <Toolbar>
+              <Container>
+                <Grid item container alignItems="center" justify="center">
+                <Grid item xs={0} sm={1}/>
+                <Grid item xs={0} sm={3}>
+                  <Button className={classes.logoStyles}>JP</Button>
                 </Grid>
-              </Grid>
-            </Container>
-          </Toolbar>
-        </AppBar>
-      </React.Fragment>
-    )
+                  <Grid item xs={0} sm={4}/>
+                  <Grid item xs={0} sm={3} alignItems='center'>
+                    <Button className={classes.textStyles}>asdf</Button>
+                    <Button className={classes.textStyles}>asdf</Button>
+                    <Button className={classes.textStyles}>asdf</Button>
+                  </Grid>
+                </Grid>
+              </Container>
+            </Toolbar>
+          </AppBar>
+        </React.Fragment>
+      )
 }
 
 export default Header
