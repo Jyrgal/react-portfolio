@@ -17,9 +17,10 @@ import Experience from './Experience'
 import Form from './MyForm'
 import Type from './Type'
 import windowDimensions from './getWindowDimensions'
+import PhotoCard from './PhotoCard'
+import Frame from './Frame'
 
 const App = () => {
-  
   return (
     <Grid container direction="column">
       <Grid item>
@@ -98,9 +99,14 @@ const App = () => {
           <div style={{height: "50px"}}/>
           <Form/>
           <div style={{height: "50px"}}/>
+          <div style={{display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"}}>
+            <PhotoCard/>
+          </div>
+          <Frame/>
         </Grid>
-        <Grid item sm
-        />
+        <Grid item sm/>
       </Grid>
     </Grid>
   )

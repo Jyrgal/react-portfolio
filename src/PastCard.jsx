@@ -16,7 +16,7 @@ function PastCard() {
       <a.div class="c back" style={{ opacity: opacity.interpolate(o => 1 - o), transform, 
                                     display: "flex",
                                     justifyContent: "center",
-                                    alignItems: "center",}}/>
+                                    alignItems: "center"}}/>
       <a.div class="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`), 
                                     display: "flex",
                                     justifyContent: "center",
