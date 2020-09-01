@@ -99,11 +99,11 @@ const App = () => {
           <div style={{height: "50px"}}/>
           <Form/>
           <div style={{height: "50px"}}/>
-          <div style={{display: "flex",
+          {/* <div style={{display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center"}}>
             <PhotoCard/>
-          </div>
+          </div> */}
           <Frame/>
         </Grid>
         <Grid item sm/>
@@ -113,3 +113,4 @@ const App = () => {
 }
 
 export default App;
+

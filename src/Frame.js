@@ -6,6 +6,7 @@ import useMeasure from './useMeasure'
 import useMedia from './useMedia'
 import FramePics from './FramePics'
 import styles from './Frame.module.css'
+import { Button } from '@material-ui/core'
 
 function Frame() {
   // Hook1: Tie media queries to the number of columns
@@ -34,13 +35,16 @@ function Frame() {
   })
   // Render the grid
   return (
-    <div {...bind} class={styles.list} style={{ height: Math.max(...heights) }}>
-      {transitions.map(({ item, props: { xy, ...rest }, key }) => (
-        <a.div key={key} style={{ transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`), ...rest }}>
-          <div style={{ backgroundImage: item.css }} />
-        </a.div>
-      ))}
-    </div>
+    <React.Fragment>
+      <div {...bind} class={styles.list} style={{ height: Math.max(...heights) }}>
+        {transitions.map(({ item, props: { xy, ...rest }, key }) => (
+          <a.div key={key} style={{ transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`), ...rest }}>
+            <div style={{ backgroundImage: item.css }} />
+          </a.div>
+        ))}
+      </div>
+      <Button/>
+    </React.Fragment>
   )
 }
 
