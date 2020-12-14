@@ -8,14 +8,14 @@ class Title extends React.Component {
       <div className="Title">
         <header className="Title-header">
           <div style={{height: "10vh"}}/>
-          <h1>James Pan</h1>
+          <h1>Hi, I'm James</h1>
           <p>
             <Typical
                 steps={[
-                  'Developer 💻', 1000,  
-                  'Scholar 📚', 1000,
-                  'Bodybuilder 🏋️', 1000,
-                  'BBaller 🏀', 1000
+                  'A Full-stack Developer 💻', 1000,  
+                  'A Scholar 📚', 1000,
+                  'A Bodybuilder 🏋️', 1000,
+                  'A BBaller 🏀', 1000
                 ]}
                 loop={Infinity}
                 wrapper = 'p'

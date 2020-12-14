@@ -19,8 +19,12 @@ import Type from './Type'
 import windowDimensions from './getWindowDimensions'
 import PhotoCard from './PhotoCard'
 import Frame from './Frame'
+import SkillList from './SkillList'
 
 const App = () => {
+  const master_clicked = () => {
+    console.log("master_clicked")
+  }
   return (
     <Grid container direction="column">
       <Grid item>
@@ -50,18 +54,32 @@ const App = () => {
           </Paper> */}
           <About id="about"/>
           
-          <div style={{height: "50px"}}/>
+          <div style={{height: "20px"}}/>
+          {/* <SkillList/> */}
+
           <h1>Experience</h1>
           <Grid item container>
-            <Grid item xs={0} sm={6}>
-              <Experience experience="mastercard"/>
+            <Grid item xs={0} sm={6} >
+              {/* <Experience experience="mastercard"/> */}
+              <PastCard experience="mastercard" company="Mastercard" position="Software Engineer" duration="2019-2020"/>
             </Grid>
             <Grid item xs={0} sm={6}>
-              <Experience experience="auspost"/>
+              {/* <Experience experience="auspost"/> */}
+              <PastCard experience="ikea" company="Ikea" position="Salesperson" duration="2020-Current"/>
             </Grid>
           </Grid>
+          <div style={{height: "20vh"}}/>
+          <Grid item container>
+              <Grid item xs={0} sm={6}>
+                {/* <Experience experience="ikea"/> */}
+                <PastCard experience="auspost" company="Aus Post" position="Cashier" duration="2017-2019"/>
+              </Grid>
+              <Grid item xs={0} sm={6}>
+              </Grid>
+          </Grid>
           
-          <div style={{height: "50px"}}/>
+          <div style={{height: "50vh"}}/>
+
           <h1>Skills</h1>
           <Skills logo="backend" style={{    display: "flex",
           flexDirection: "column",
@@ -104,7 +122,7 @@ const App = () => {
                                     alignItems: "center"}}>
             <PhotoCard/>
           </div> */}
-          <Frame/>
+          {/* <Frame/> */}
         </Grid>
         <Grid item sm/>
       </Grid>

@@ -5,7 +5,7 @@ import { AppBar, Toolbar, Typography,
     GridList, ButtonGroup } from "@material-ui/core"
 import {MenuIcon} from "@material-ui/icons"
 import ReactPlayer from 'react-player'
-import Logo from "./SpinLogo"
+import Logo from "./logos/JP_logo.jpg"
 import windowDimensions from './getWindowDimensions'
 import { useEffect } from 'react'
 
@@ -13,7 +13,8 @@ const useStyles = makeStyles(() => ({
     logoStyles: {
         flex: 1,
         color: 'white',
-        fontSize: '36px',
+        height: '48px',
+        width: '18px',
         fontWeight: 'bold'
     },
     textStyles: {
@@ -50,7 +51,9 @@ const Header = () => {
                 <Grid item container alignItems="center" justify="center">
                 <Grid item xs={0} sm={1}/>
                 <Grid item xs={0} sm={3}>
-                  <Button className={classes.logoStyles}>JP</Button>
+                  <Button className={classes.logoStyles}>
+                    <img src={Logo} className={classes.logoStyles}/>
+                  </Button>
                 </Grid>
                   <Grid item xs={0} sm={4}/>
                   <Grid item xs={0} sm={3} alignItems='center'>

@@ -11,7 +11,7 @@ const linear = scaleLinear().domain([0, window.innerWidth]);
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#141A46',
+      main: 'rgb(0,0,0)',
     },
     secondary: {
       main: '#EC8b5E',

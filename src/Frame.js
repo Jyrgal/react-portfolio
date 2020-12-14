@@ -43,7 +43,6 @@ function Frame() {
           </a.div>
         ))}
       </div>
-      <Button/>
     </React.Fragment>
   )
 }

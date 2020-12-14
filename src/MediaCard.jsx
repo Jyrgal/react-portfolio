@@ -12,29 +12,25 @@ import {GoMarkGithub} from 'react-icons/go'
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    backgroundColor: "#e91e63",
+    backgroundColor: "rgb(0,0,0)",
   },
   media: {
     height: 200,
   },
   title: {
-    color: '#ffda2a',
+    color: '#ffffff',
     fontSize: '32px',
-    fontWeight: 'bold',
-    fontFamily: 'Dosis',
     display: "flex",
     justifyContent: "center",
     alignItems: "center"
   },
   text: {
-    color: '#ffda2a',
-    fontSize: '18px',
-    fontFamily: 'Dosis'
+    color: '#ffffff',
+    fontSize: '14px'
   },
   link: {
-    color: '#00eaff',
-    fontSize: '18px',
-    fontFamily: 'Dosis'
+    color: '#ffffff',
+    fontSize: '18px'
   },
 });
 

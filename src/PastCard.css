@@ -1,24 +1,22 @@
-
 .c {
+  background-position: center center;
   position: absolute;
-  width: 50rem;
-  height: auto;
+  width: 30ch;
+  height: 30ch;
   cursor: pointer;
   will-change: transform, opacity;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.front,
-.back {
   background-size: cover;
+  white-space: pre-line; 
 }
 
-.front {
-  background-image: url('./logos/hongkong.jpeg');
+.mastercard {
+  background-image: url("./logos/mastercard.jpg");
 }
 
-.back {
-  background-image: url('./logos/hongkong.jpeg');
+.ikea {
+  background-image: url("./logos/ikea.png");
+}
+
+.auspost {
+  background-image: url("./logos/auspost.png");
 }
