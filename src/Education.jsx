@@ -19,7 +19,7 @@ const pages = [
   </animated.div>,
   ({ style }) => <animated.div style={{ ...style}}>
     <div style={{display:'flex'}}>
-                      <img src = './unsw.png' style={{height: '20vh', width:'50vh',backgroundCover: "cover", backgroundPosition: "center center", position: "relative"}}/>
+                      <img src = './unsw.png' style={{height: '18vh', width:'50vh',backgroundCover: "cover", backgroundPosition: "center center", position: "relative"}}/>
                       <p style={{position:"relative"}}>UNSW<br/>Graduate of 2022 <br/> Bachelor of Electrical Engineering (Honours)<br/>WAM of 78</p>
                     </div>
   </animated.div>,
