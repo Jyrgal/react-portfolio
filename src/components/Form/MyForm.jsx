@@ -1,13 +1,8 @@
-// Customize this 'myform.js' script and add it to your JS bundle.
-// Then import it with 'import MyForm from "./myform.js"'.
-// Finally, add a <MyForm/> element whereever you wish to display the form.
-import Alert from '@material-ui/lab/Alert';
-import TextField from '@material-ui/core/TextField';
-import React from "react";
-import Paper from '@material-ui/core/Paper';
-import FormControl from '@material-ui/core/FormControl';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import Button from '@material-ui/core/Button';
+import Alert from '@material-ui/lab/Alert'
+import TextField from '@material-ui/core/TextField'
+import React from "react"
+import Paper from '@material-ui/core/Paper'
+import Button from '@material-ui/core/Button'
 
 export default class MyForm extends React.Component {
   constructor(props) {

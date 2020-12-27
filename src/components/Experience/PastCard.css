@@ -10,13 +10,13 @@
 }
 
 .mastercard {
-  background-image: url("./logos/mastercard.jpg");
+  background-image: url("/mastercard.jpg");
 }
 
 .ikea {
-  background-image: url("./logos/ikea.png");
+  background-image: url("/ikea.png");
 }
 
 .auspost {
-  background-image: url("./logos/auspost.png");
+  background-image: url("/auspost.png");
 }

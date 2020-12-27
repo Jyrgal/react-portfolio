@@ -1,18 +1,12 @@
-"use strict";
+"use strict"
 
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
 
 import {
   Link,
-  DirectLink,
   Element,
-  Events,
-  animateScroll,
-  scrollSpy,
-  scroller,
-  ScrollElement
-} from "react-scroll";
+  scroller
+} from "react-scroll"
 
 class Section extends React.Component {
   scrollTo(offset) {
@@ -21,7 +15,7 @@ class Section extends React.Component {
       delay: 0,
       smooth: "easeInOutQuart",
       offset: offset
-    });
+    })
   }
   render() {
     return (

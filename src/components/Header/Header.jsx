@@ -1,14 +1,9 @@
-import React, { Component, useState, useRef } from 'react'
-import { AppBar, Toolbar, Typography, 
+import React, { useState, useRef } from 'react'
+import { AppBar, Toolbar, 
     makeStyles, Grid, Container, 
-    Button, IconButton, CardMedia, GridListTile,
-    GridList, ButtonGroup } from "@material-ui/core"
-import {MenuIcon} from "@material-ui/icons"
-import ReactPlayer from 'react-player'
-import Logo from "./logos/jp2_logo.png"
+    Button } from "@material-ui/core"
 import windowDimensions from './getWindowDimensions'
 import { useEffect } from 'react'
-import {Link} from 'react-scroll'
 
 const useStyles = makeStyles(() => ({
     logoStyles: {
@@ -56,9 +51,8 @@ const Header = (props) => {
                   <Grid item xs={0} sm={1}/>
                   <Grid item xs={0} sm={3}>
                     <Button className={classes.logoStyles} onClick={(e) => { logoNav.current.scrollIntoView({ block: 'start', behavior: 'smooth' }); e.preventDefault() }}>
-                      <img src={Logo} className={classes.logoStyles}/>
+                      <img src='/jp2_logo.png' className={classes.logoStyles}/>
                     </Button>
-                    
                   </Grid>
                     <Grid item xs={0} sm={4}/>
                     <Grid item xs={0} sm={3} alignItems='center'>

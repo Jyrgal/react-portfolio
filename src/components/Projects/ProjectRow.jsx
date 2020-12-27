@@ -1,6 +1,5 @@
 import React from 'react'
 import {Grid} from '@material-ui/core'
-import Typical from 'react-typical'
 import MediaCard from './MediaCard'
 import Projects from './ProjectData'
 

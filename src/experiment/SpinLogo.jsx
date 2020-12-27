@@ -1,8 +1,4 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography, 
-    makeStyles, Grid, Container, 
-    Button, IconButton, CardMedia} from "@material-ui/core"
-import {MenuIcon} from "@material-ui/icons"
 import ReactPlayer from 'react-player'
 
 const SpinLogo = () => {

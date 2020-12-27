@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react'
-import { render } from 'react-dom'
 import { useTransition, useSpring, useChain, config } from 'react-spring'
 import {Container, Item } from './SkillList_styles'
 import technical_data from './SkillList_data'
 import soft_data from './Soft_data'
-import logo from './logos/auspost.jpg'
+
 const SkillList = (props) => {
   const [open, set] = useState(false)
 

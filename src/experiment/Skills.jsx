@@ -1,6 +1,4 @@
-import ReactDOM from 'react-dom'
 import React from 'react'
-import {Grid} from '@material-ui/core'
 import { useSpring, animated } from 'react-spring'
 import range from 'lodash-es/range'
 import './Skills.css'
