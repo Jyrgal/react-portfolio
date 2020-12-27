@@ -53,13 +53,13 @@ const MediaCard = (props) => {
             {name}
           </Typography>
           <Typography className={classes.text} variant="body2" color="textSecondary" component="p">
-            Lasdf
+            {props.description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <div style={{width: "75%"}}/>
-        <Button className={classes.link} size="small" color="secondary">
+        <Button className={classes.link} size="small" color="secondary" href={props.url} target="_blank">
           <GoMarkGithub/>
         </Button>
       </CardActions>

@@ -1,24 +1,37 @@
-// Gradients taken from: https://webgradients.com/
 export default [
   {
-    name: 'Rare Wind',
-    image: "url(./logos/JP_logo.jpg)",
-    height: 50,
-    width: 50
+    name: 'C',
+    description: 'C programming language',
+    css: '/C.jpg'
   },
   {
-    name: 'Saint Petersburg',
-    image: "url(./logos/auspost.jpg)",
-    height: 50
+    name: 'C++',
+    description: 'C++ programming language',
+    css: '/C++.jpg'
   },
   {
-    name: 'Deep Blue',
-    image: "url(./logos/auspost.jpg)",
-    height: 50
+    name: 'Python',
+    description: 'Python programming language',
+    css: '/python.jpg'
   },
   {
-    name: 'Ripe Malinka',
-    image: "url(./logos/auspost.jpg)",
-    height: 50
-  }
+    name: 'Java',
+    description: 'Java programming language',
+    css: '/java.jpg'
+  },
+  {
+    name: 'Scala',
+    description: 'Scala programming language',
+    css: '/scala.jpg',
+  },
+  {
+    name: 'Javascript',
+    description: 'Javascript programming language',
+    css: '/javascript.png'
+  },
+  {
+    name: 'Node',
+    description: 'Node programming language',
+    css: '/node.jpg'
+  },
 ]

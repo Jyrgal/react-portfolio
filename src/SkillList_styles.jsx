@@ -17,10 +17,10 @@ const Container = styled(animated.div)`
 `
 
 const Item = styled(animated.div)`
-  width: 20vh;
-  height: 20vh;
+  width: 8vh;
+  height: 8vh;
   background: white;
-  border-radius: 5px;
+  border-radius: 2px;
   will-change: transform, opacity;
 `
 

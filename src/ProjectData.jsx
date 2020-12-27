@@ -1,0 +1,42 @@
+export default [
+  {
+    leftName: 'QA Time Prediction',
+    leftDescription: 'Prediction of total time required for car to pass QA testing',
+    leftImage: '/qa_time_prediction.png',
+    leftUrl: 'https://github.com/Jyrgal/mercedes_challenge',
+    rightName: 'React Portfolio',
+    rightDescription: 'Personal project for portfolio',
+    rightImage: '/react_portfolio.png',
+    rightUrl: 'https://github.com/Jyrgal/react-portfolio',
+  },
+  {
+    leftName: 'Rating Prediction',
+    leftDescription: 'Prediction of movie review ratings based on textual analysis',
+    leftImage: '/rating_prediction.png',
+    leftUrl: 'https://github.com/Jyrgal/imdbML',
+    rightName: 'Stock Prediction',
+    rightDescription: 'Ongoing project/playground to test stock predictions using Finnhub API',
+    rightImage: '/stock_predict.png',
+    rightUrl: 'https://github.com/Jyrgal/stockPredict',
+  },  
+  {
+    leftName: 'Egg Pickup',
+    leftDescription: 'Robotics project where full automation of egg pickup/delivery',
+    leftImage: '/egg_pickup.png',
+    leftUrl: 'https://github.com/Jyrgal/eggPickup',
+    rightName: 'React Workshop',
+    rightDescription: 'Demo website used to teach beginner React skills',
+    rightImage: '/workshop.png',
+    rightUrl: 'https://github.com/Jyrgal/react-workshop',
+  },
+  {
+    leftName: 'ENGSOC website',
+    leftDescription: 'Revamp of society website using ReactJS',
+    leftImage: '/engsoc_website.png',
+    leftUrl: 'https://unswengsoc.com/',
+    rightName: 'Dungeon Hunter',
+    rightDescription: 'Java dungeon crawler style game',
+    rightImage: '/dungeon.png',
+    rightUrl: 'https://github.com/Jyrgal/Dungeon-Hunter',
+  }
+]

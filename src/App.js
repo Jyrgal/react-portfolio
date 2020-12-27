@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, useState, useRef } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import { Button, Grid, Container, Typography, Paper, Fab } from '@material-ui/core'
@@ -20,27 +20,40 @@ import windowDimensions from './getWindowDimensions'
 import PhotoCard from './PhotoCard'
 import Frame from './Frame'
 import SkillList from './SkillList'
+import ContactForm from './ContactForm'
+import Scroll from './Scroll'
+import Education from './Education'
 
 const App = () => {
   const master_clicked = () => {
     console.log("master_clicked")
   }
+
+  const logoRef = useRef(null)
+  const aboutRef = useRef(null)
+  const projectsRef = useRef(null)
+  const contactRef = useRef(null)
+
   return (
     <Grid container direction="column">
       <Grid item>
-        <Header/>
+        <Header 
+          logoNav={logoRef}
+          aboutNav={aboutRef}
+          projectsNav={projectsRef}
+          contactNav={contactRef}
+        />
       </Grid>
       
-      <div className="Main">
+      <div className="Main" ref={logoRef}>
           <Title/>
           <div style={{height: "35vh"}}/>
-          <Fab href="#about" color="white" aria-label="add">
+          <Fab href="#about" color="white" aria-label="add" onClick={(e) => { aboutRef.current.scrollIntoView({ block: 'start', behavior: 'smooth' }); e.preventDefault() }}>
             <ArrowDownwardIcon />
           </Fab>
       </div>
       <div style={{height: "10vh"}}/>
-      
-      <Grid item container>
+      <Grid item container ref={aboutRef}>
         <Grid item sm md/>
         <Grid item sm
               justify="center" 
@@ -52,11 +65,10 @@ const App = () => {
           </Container> */}
           {/* <Paper elevation={9}>Hi waowsas 
           </Paper> */}
+          
           <About id="about"/>
           
           <div style={{height: "20px"}}/>
-          {/* <SkillList/> */}
-
           <h1>Experience</h1>
           <Grid item container>
             <Grid item xs={0} sm={6} >
@@ -78,10 +90,32 @@ const App = () => {
               </Grid>
           </Grid>
           
-          <div style={{height: "50vh"}}/>
+          <div style={{height: "20vh"}}/>
+          <h1>Education</h1>
 
+          <Grid item container>
+              <Grid item xs={0} sm={2}>
+              </Grid>
+              <Grid item xs={0} sm={8}>
+                <Education/>
+              </Grid>
+              <Grid item xs={0} sm={2}>
+              </Grid>
+          </Grid>
+          
+          <div style={{height: "50vh"}}/>
           <h1>Skills</h1>
-          <Skills logo="backend" style={{    display: "flex",
+          
+          <Grid item container>
+              <Grid item xs={0} sm={6}>
+                {/* <Experience experience="ikea"/> */}
+                <SkillList type="technical"/>
+              </Grid>
+              <Grid item xs={0} sm={6}>
+                <SkillList type="soft"/>
+              </Grid>
+          </Grid>
+          {/* <Skills logo="backend" style={{    display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center"}}/>
@@ -91,8 +125,8 @@ const App = () => {
               <Skills logo="frontend"/>
             </Grid>
           </Grid>
-          <Skills logo="misc"/>
-          <div style={{height: "50px"}}/>
+          <Skills logo="misc"/> */}
+          <div style={{height: "5vh"}} ref={projectsRef}/>
           <h1>Projects</h1>
             {/* <Grid item xs={0} sm={1}/>
             <Grid item xs={0} sm={4}>
@@ -103,19 +137,43 @@ const App = () => {
               <MediaCard name="React Workshop" pic="videos/workshop.png"/>
             </Grid>
             <Grid item xs={0} sm={1}/> */}
-          <ProjectRow 
-            leftName="Dungeon Crawler" leftDescription="A java dungeon crawler game where the player uses wasd to reach the exit."
-            leftPic="videos/dungeon.png" leftUrl="https://github.com/Jyrgal/Dungeon-Hunter"
-            rightName="React Workshop" rightDescription="A short demo website used for an uni workshop"
-            rightPic="videos/workshop.png" rightUrl="https://github.com/Jyrgal/react-workshop"
+          {/* <ProjectRow 
+            leftName="QA Time Prediction" leftDescription="Prediction of total time required for car to pass QA testing"
+            leftPic="videos/dungeon.png" leftUrl="https://github.com/Jyrgal/mercedes_challenge"
+            rightName="React Portfolio" rightDescription="Personal project for portfolio"
+            rightPic="videos/workshop.png" rightUrl="https://github.com/Jyrgal/react-portfolio"
           />
           <div style={{height: "50px"}}/>
           <ProjectRow
-            leftName="Exchange Scraper" leftPic="videos/dungeon.png" leftUrl="https://github.com/Jyrgal/Dungeon-Hunter"
-            rightName="Website Redesign" rightPic="videos/workshop.png" rightUrl="https://github.com/Jyrgal/react-workshop"
+            leftName="Movie Rating Prediction" leftDescription="Prediction of movie review ratings based on textual analysis"
+            leftPic="videos/dungeon.png" leftUrl="https://github.com/Jyrgal/imdbML"
+            rightName="Stock Prediction" rightDescription="Ongoing project/playground to test stock predictions"
+            rightPic="videos/workshop.png" rightUrl="https://github.com/Jyrgal/stcokPredict"
           />
           <div style={{height: "50px"}}/>
-          <Form/>
+          <ProjectRow 
+            leftName="Egg Pickup" leftDescription="Robotics project where full automation of egg pickup/delivery"
+            leftPic="videos/dungeon.png" leftUrl="https://github.com/Jyrgal/eggPickup"
+            rightName="React Workshop" rightDescription="Short demo website used to teach beginner React skills"
+            rightPic="videos/workshop.png" rightUrl="https://github.com/Jyrgal/react-workshop"
+          /> */}
+          <ProjectRow/>
+          <div style={{height: "50px"}}/>
+          <Grid item container ref={contactRef}>
+          <Grid item xs={0} sm={3}>
+                
+                </Grid>
+              <Grid item xs={0} sm={6}>
+              <Paper style={{fontSize:'2em'}}>
+                Fill the form below to contact me!
+                </Paper>
+                <div style={{height: "10px"}}/>
+                <Form/>
+              </Grid>
+              <Grid item xs={0} sm={3}>
+                
+              </Grid>
+          </Grid>
           <div style={{height: "50px"}}/>
           {/* <div style={{display: "flex",
                                     justifyContent: "center",
@@ -123,6 +181,7 @@ const App = () => {
             <PhotoCard/>
           </div> */}
           {/* <Frame/> */}
+
         </Grid>
         <Grid item sm/>
       </Grid>

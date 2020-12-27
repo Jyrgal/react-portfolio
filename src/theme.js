@@ -18,7 +18,8 @@ const theme = createMuiTheme({
     },
     text: {
       main: '#ffda2a',
-    }
+    },
+    
   },
 });
 

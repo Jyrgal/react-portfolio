@@ -1,0 +1,10 @@
+.simple-trans-main > div {
+  cursor: pointer;
+  position: absolute;
+  width: 82vh;
+  height: 43vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform, opacity;
+}
