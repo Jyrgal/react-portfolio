@@ -17,7 +17,7 @@ const SkillList = (props) => {
 
   const transRef = useRef()
 
-  const transitions = useTransition(open ? (props.type ==='intermediate' ? intermediate_data : advanced_data) : [], item => item.name, {
+  const transitions = useTransition(open ? (props.type ==='Intermediate' ? intermediate_data : advanced_data) : [], item => item.name, {
     ref: transRef,
     unique: true,
     trail: 400 / intermediate_data.length,

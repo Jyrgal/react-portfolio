@@ -37,8 +37,8 @@ const App = () => {
       </div>
       <div style={{height: "10vh"}}/>
       <Grid item container ref={aboutRef}>
-        <Grid item sm md/>
-        <Grid item sm
+        <Grid item xs sm md lg/>
+        <Grid item xs sm md lg
               justify="center" 
               alignItems="center"
         >
@@ -46,19 +46,19 @@ const App = () => {
           <div style={{height: "20px"}}/>
           <h1>Experience</h1>
           <Grid item container>
-            <Grid item xs={0} sm={6} >
+            <Grid item xs={6} sm={6} md={6} lg={6}>
               <PastCard experience="mastercard" company="Mastercard" position="Software Engineer" duration="2019-2020"/>
             </Grid>
-            <Grid item xs={0} sm={6}>
+            <Grid item xs={6} sm={6} md={6} lg={6}>
               <PastCard experience="ikea" company="Ikea" position="Salesperson" duration="2020-Current"/>
             </Grid>
           </Grid>
           <div style={{height: "20vh"}}/>
           <Grid item container>
-              <Grid item xs={0} sm={6}>
+              <Grid item xs={6} sm={6} md={6} lg={6}>
                 <PastCard experience="auspost" company="Aus Post" position="Cashier" duration="2017-2019"/>
               </Grid>
-              <Grid item xs={0} sm={6}>
+              <Grid item xs={6} sm={6} md={6} lg={6}>
               </Grid>
           </Grid>
           
@@ -66,12 +66,12 @@ const App = () => {
           <h1>Education</h1>
 
           <Grid item container>
-              <Grid item xs={0} sm={2}>
+              <Grid item xs={2} sm={2} md={2} lg={2}>
               </Grid>
-              <Grid item xs={0} sm={8}>
+              <Grid item xs={8} sm={8} md={8} lg={8}>
                 <Education/>
               </Grid>
-              <Grid item xs={0} sm={2}>
+              <Grid item xs={2} sm={2} md={2} lg={2}>
               </Grid>
           </Grid>
           
@@ -79,11 +79,11 @@ const App = () => {
           <h1>Skills</h1>
           
           <Grid item container>
-              <Grid item xs={0} sm={6}>
-                <SkillList type="proficient"/>
+              <Grid item xs={6} sm={6} md={6} lg={6}>
+                <SkillList type="Proficient"/>
               </Grid>
-              <Grid item xs={0} sm={6}>
-                <SkillList type="intermediate"/>
+              <Grid item xs={6} sm={6} md={6} lg={6}>
+                <SkillList type="Intermediate"/>
               </Grid>
           </Grid>
           <div style={{height: "5vh"}} ref={projectsRef}/>
@@ -91,21 +91,21 @@ const App = () => {
           <ProjectRow/>
           <div style={{height: "50px"}}/>
           <Grid item container ref={contactRef}>
-          <Grid item xs={0} sm={3}>
+          <Grid item xs={3} sm={3} md={3} lg={3}>
                 </Grid>
-              <Grid item xs={0} sm={6}>
+              <Grid item xs={6} sm={6} md={6} lg={6}>
               <Paper style={{fontSize:'2em'}}>
                 Fill the form below to contact me!
                 </Paper>
                 <div style={{height: "10px"}}/>
                 <Form/>
               </Grid>
-              <Grid item xs={0} sm={3}>  
+              <Grid item xs={3} sm={3} md={3} lg={3}>  
               </Grid>
           </Grid>
           <div style={{height: "50px"}}/>
         </Grid>
-        <Grid item sm/>
+        <Grid item xs sm md lg/>
       </Grid>
     </Grid>
   )
