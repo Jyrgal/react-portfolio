@@ -19,10 +19,11 @@ export default [
     description: 'Java programming language',
     css: '/java.jpg'
   },
+
   {
-    name: 'Scala',
-    description: 'Scala programming language',
-    css: '/scala.jpg',
+    name: 'React',
+    description: 'React programming language',
+    css: '/react.jpg'
   },
   {
     name: 'Javascript',

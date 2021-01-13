@@ -5,11 +5,10 @@ export default [
     css: '/swift.jpg'
   },
   {
-    name: 'React',
-    description: 'React programming language',
-    css: '/react.jpg'
+    name: 'Scala',
+    description: 'Scala programming language',
+    css: '/scala.jpg',
   },
-
   {
     name: 'HTML',
     description: 'HTML programming language',

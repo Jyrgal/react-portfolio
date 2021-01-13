@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { useTransition, useSpring, useChain, config } from 'react-spring'
 import {Container, Item } from './SkillList_styles'
-import technical_data from './SkillList_data'
-import soft_data from './Soft_data'
+import advanced_data from './Advanced_data'
+import intermediate_data from './Intermediate_data'
 
 const SkillList = (props) => {
   const [open, set] = useState(false)
@@ -17,10 +17,10 @@ const SkillList = (props) => {
 
   const transRef = useRef()
 
-  const transitions = useTransition(open ? (props.type ==='soft' ? soft_data : technical_data) : [], item => item.name, {
+  const transitions = useTransition(open ? (props.type ==='intermediate' ? intermediate_data : advanced_data) : [], item => item.name, {
     ref: transRef,
     unique: true,
-    trail: 400 / soft_data.length,
+    trail: 400 / intermediate_data.length,
     from: { opacity: 0, transform: 'scale(0)' },
     enter: { opacity: 1, transform: 'scale(1)' },
     leave: { opacity: 0, transform: 'scale(0)' }
