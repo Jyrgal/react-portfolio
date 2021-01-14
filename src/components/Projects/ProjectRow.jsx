@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    marginBottom: '50px'
   }
 }));
 
@@ -24,7 +25,7 @@ const ProjectRow = () => {
     return (
       Projects.map((project, key) => {
         return (
-          <Grid item container style={{marginBottom: '10px'}}>
+          <Grid item container>
             <Grid item xs={0} sm={0} md={0} lg={0}/>
             <Grid item className={classes.card} xs={12} sm={12} md={6} lg={6}>
               <MediaCard name={project.leftName} pic={project.leftImage} url={project.leftUrl} description={project.leftDescription} long={project.leftLong}/>
