@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
+import { Grid, Paper, Fab } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -8,13 +8,12 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(120),
-      height: theme.spacing(40),
     },
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    textAlign: 'justify'
   },
   paper: {
     backgroundColor: '#FFFFFF',
@@ -34,13 +33,24 @@ export default function About() {
   return (
         <div className={classes.root}>
           <div style={{height: "30px"}}/>
-          <Paper className={classes.paper} background="#e91e63" elevation={10} >
-            <h1 className={classes.writing}>Hi, I'm James</h1>
-            <h3 className={classes.writing}>An amibitious tech enthusiast 📟 who enjoys all sorts of challenges</h3>
-            <h3 className={classes.writing}>My passions 🔥 lie in discovering new and innovative things </h3>
-            <h3 className={classes.writing}>like the vast landscape of machine learning 🤖DEEDOO DEEDOO</h3>
-            <h3 className={classes.writing}>or the artistic 🎨 world of front end programming.</h3>
-          </Paper>
+          <Grid item container>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Paper className={classes.paper} background="#e91e63" elevation={10} >
+                <Grid item container>
+                  <Grid item xs={2} sm={2} md={2} lg={2}/>
+                  <Grid item xs={8} sm={8} md={8} lg={8}>
+                    <h1 className={classes.writing}>Hi, I'm James</h1>
+                    <h3>An amibitious tech enthusiast 📟 who enjoys all sorts of challenges
+                    My passions 🔥 lie in discovering new and innovative things
+                    like the vast landscape of machine learning 🤖DEEDOO DEEDOO
+                    or the artistic 🎨 world of front end programming.</h3>
+                  </Grid>
+                  <Grid item xs={2} sm={2} md={2} lg={2}/>
+                </Grid>
+                <div style={{height: "30px"}}/>
+              </Paper>
+            </Grid>
+          </Grid>
         </div>
   );
 }

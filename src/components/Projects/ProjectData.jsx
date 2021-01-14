@@ -6,7 +6,7 @@ export default [
     leftUrl: 'https://github.com/Jyrgal/mercedes_challenge',
     leftLong: 'Machine learning project that involved experimentation with several preprocessing techniques as well as algorithms to best reach the most accurate time to predict total QA testing times. Involved python with some data processing and was a 4 person group project.',
     rightName: 'React Portfolio',
-    rightDescription: 'Personal project for portfolio',
+    rightDescription: 'Personal ReactJS project for resume portfolio (aka this website)',
     rightImage: '/react_portfolio.png',
     rightUrl: 'https://github.com/Jyrgal/react-portfolio',
     rightLong: 'React application utilising material-ui, react-spring as well as API services for contact.'
@@ -37,12 +37,12 @@ export default [
   },
   {
     leftName: 'ENGSOC website',
-    leftDescription: 'Revamp of society website using ReactJS',
+    leftDescription: 'Complete redesign of uni engineering society website using ReactJS',
     leftImage: '/engsoc_website.png',
     leftUrl: 'https://unswengsoc.com/',
     leftLong: 'Complete redesign of UNSW Engineering Society website using ReactJS & carbon components. Closely worked together with a partner to deliver the website on time and implement features as requested by society directors.',
     rightName: 'Dungeon Hunter',
-    rightDescription: 'Java dungeon crawler style game',
+    rightDescription: 'Java dungeon crawler style game with extended features such as mulit-layered puzzles',
     rightImage: '/dungeon.png',
     rightUrl: 'https://github.com/Jyrgal/Dungeon-Hunter',
     rightLong: 'Group project that utilised Java (JavaFX) to create a dungeon crawler style game with extensible features such as multi-attributed items.'
