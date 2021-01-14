@@ -10,6 +10,7 @@ import ProjectRow from './components/Projects/ProjectRow'
 import Form from './components/Form/MyForm'
 import SkillList from './components/SkillList/SkillList'
 import Education from './components/Education/Education'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   const logoRef = useRef(null)
@@ -92,22 +93,24 @@ const App = () => {
           <ProjectRow/>
           <div style={{height: "50px"}}/>
           <Grid item container ref={contactRef}>
-          <Grid item xs={0} sm={0} md={3} lg={3}>
+          <Grid item xs={0} sm={0} md={1} lg={1}>
                 </Grid>
-              <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Paper style={{fontSize:'2em'}}>
+              <Grid item xs={12} sm={12} md={10} lg={10}>
+              {/* <Paper style={{fontSize:'2em', textAlign: 'center'}}>
                 Fill the form below to contact me!
-                </Paper>
+                </Paper> */}
                 <div style={{height: "10px"}}/>
                 <Form/>
               </Grid>
-              <Grid item xs={0} sm={0} md={3} lg={3}>  
+              <Grid item xs={0} sm={0} md={1} lg={1}>  
               </Grid>
           </Grid>
           <div style={{height: "50px"}}/>
+          {/* <Footer/> */}
         </Grid>
         <Grid item xs={2} sm={2} md={2} lg={2}/>
       </Grid>
+      <div style={{height: "50px"}}/>
     </Grid>
   )
 }

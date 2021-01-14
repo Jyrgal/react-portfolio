@@ -3,20 +3,13 @@ import {Grid} from '@material-ui/core'
 import MediaCard from './MediaCard'
 import Projects from './ProjectData'
 import { makeStyles } from '@material-ui/core/styles'
-const styles = { 
-  card: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  }
-}
 
 const useStyles = makeStyles((theme) => ({
   card: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: '50px'
+    marginBottom: '80px'
   }
 }));
 

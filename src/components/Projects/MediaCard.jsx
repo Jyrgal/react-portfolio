@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import {GoMarkGithub} from 'react-icons/go'
 import Modal from '@material-ui/core/Modal'
-import { Paper, Grid, Container } from '@material-ui/core'
+import { Paper, Container } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 
@@ -51,23 +51,10 @@ const useStyles = makeStyles({
   }
 })
 
-function getModalStyle() {
-  const top = 50
-  const left = 50
-
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  }
-}
-
 const MediaCard = (props) => {
   const classes = useStyles();
   const name = props.name
   const pic = props.pic
-  const url = props.url
-  const [modalStyle] = React.useState(getModalStyle)
   const [open, setOpen] = React.useState(false)
   const handleOpen = () => {
     setOpen(true);
